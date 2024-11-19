@@ -39,7 +39,7 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # Move mouse to center of window when it is changed
-on-focus-changed = "move-mouse window-lazy-center"
+on-focus-changed = ['move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -209,7 +209,44 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iWork.Numbers'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.postmanlabs.mac'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.amazonaws.acvc.osx'
+run = ['layout floating']
+
 # [[on-window-detected]]
-# if.app-id = ''
-# run = "move-node-to-workspace T"
+# if.app-id = 'com.apple.systempreferences'
+# if.app-name-regex-substring = 'settings'
+# if.window-title-regex-substring = 'substring'
+# if.workspace = 'workspace-name'
+# if.during-aerospace-startup = true
+# check-further-callbacks = true
+# run = ['layout floating', 'move-node-to-workspace S']  # The callback itself
 
