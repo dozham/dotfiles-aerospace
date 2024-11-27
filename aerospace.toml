@@ -245,6 +245,14 @@ run = ['layout floating']
 if.app-id = 'com.jumpcloud.pwm.desktop.live'
 run = ['layout floating']
 
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = ['layout floating']
+
+# [[on-window-detected]]
+# if.app-id = ''
+# run = ['layout floating']
+
 # [[on-window-detected]]
 # if.app-id = 'com.apple.systempreferences'
 # if.app-name-regex-substring = 'settings'
