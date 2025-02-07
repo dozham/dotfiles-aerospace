@@ -39,7 +39,7 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # Move mouse to center of window when it is changed
-on-focus-changed = ['move-mouse window-lazy-center']
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -209,12 +209,17 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# TIP: Use aerospace list-apps to get IDs of running applications
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
 run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'us.zoom.xos'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Microsoft Teams'
 run = ['layout floating']
 
 [[on-window-detected]]
