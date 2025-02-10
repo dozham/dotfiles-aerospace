@@ -254,6 +254,10 @@ run = ['layout floating']
 if.app-id = 'notion.id'
 run = ['layout floating']
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Telegram'
+run = ['layout floating']
+
 # [[on-window-detected]]
 # if.app-id = ''
 # run = ['layout floating']
