@@ -11,6 +11,16 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
 
+# # Run Sketchybar together with AeroSpace
+# # sketchbar has a built-in detection of already running process,
+# # so it won't be run twice on AeroSpace restart
+# after-startup-command = ['exec-and-forget sketchybar']
+#
+# # Notify Sketchybar about workspace change
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -223,10 +233,30 @@ if.app-name-regex-substring = 'Microsoft Teams'
 run = ['layout floating']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Microsoft Outlook'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = ['layout floating']
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['layout floating']
 
 [[on-window-detected]]
+if.app-id = 'com.bitwarden.desktop'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.jkiss.dbeaver.core.product'
+run = ['layout floating']
+[[on-window-detected]]
+
 if.app-id = 'com.spotify.client'
 run = ['layout floating']
 
@@ -256,6 +286,10 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Telegram'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Spotify'
 run = ['layout floating']
 
 # [[on-window-detected]]
