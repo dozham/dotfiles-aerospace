@@ -260,6 +260,7 @@ run = ['layout floating']
 if.app-name-regex-substring = 'DBeaver'
 run = ['layout floating']
 
+[[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = ['layout floating']
 
