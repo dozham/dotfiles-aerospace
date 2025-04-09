@@ -257,6 +257,11 @@ if.app-id = 'com.jkiss.dbeaver.core.product'
 run = ['layout floating']
 [[on-window-detected]]
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'DBeaver'
+run = ['layout floating']
+[[on-window-detected]]
+
 if.app-id = 'com.spotify.client'
 run = ['layout floating']
 
